@@ -1,0 +1,211 @@
+/* import jakartar Sans from google font */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --light-cream: #fff7f0;
+  --black: #030303;
+}
+.debug {
+  outline: solid red;
+}
+
+body {
+  background-color: var(--light-cream);
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.wrapper {
+  margin-inline: auto;
+  max-width: 21.4375rem;
+  border: solid brown;
+  min-height: 100vh;
+}
+.nav-bar {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar img {
+  height: 100%;
+}
+
+.btn-consultation {
+  border-radius: 1.75rem;
+  background: var(--Black, #030303);
+  width: 11rem;
+  height: 2.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-cream);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.75rem; /* 200% */
+}
+.btn-black {
+  background-color: 000;
+}
+header {
+  text-align: center;
+  padding-inline: 1rem;
+  margin-block-start: 1rem;
+  margin-block-end: 2rem;
+}
+header h1 {
+  color: var(--Black, #030303);
+  font-size: 2.25rem;
+  font-style: normal;
+  padding-block-end: 1rem;
+}
+header p {
+  color: var(--Medium-Brown, #7a746e);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625rem; /* 162.5% */
+}
+
+/* grid design section */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  color: white;
+  /* justify-content: center; */
+}
+.grid-box {
+  outline: solid tomato;
+}
+.outer-boxes {
+  /* max-width: 22.125rem; */
+  height: 22.75rem;
+  /* flex-shrink: 0; */
+  border-radius: 0.5rem;
+  outline: solid pink;
+  /* background: var(--1---Galactic-Blue, #755cde); */
+}
+
+.outer-box-1 {
+  background: var(--1---Galactic-Blue, #755cde);
+}
+.outer-box-2 {
+  background: #f21cde;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+}
+.outer-box-2 .inner-row-1 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.outer-box-3 {
+  background: #a21c1e;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* Tablet style */
+@media (min-width: 640px) {
+  .wrapper {
+    max-width: 43.1rem;
+    border: solid purple;
+  }
+  .nav-bar {
+    height: 4rem;
+  }
+  .btn-consultation {
+    font-size: 1rem;
+    width: 14.25rem;
+    height: 3.5rem;
+  }
+  header {
+    max-width: 35.8125rem;
+    margin-inline: auto;
+    margin-block-start: 2rem;
+    margin-block-end: 4rem;
+  }
+  .header h1 {
+    font-size: 3.5rem;
+    padding-block-end: 1.69rem;
+  }
+  header p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-feature-settings: "clig";
+  }
+
+  /* grid section */
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .outer-box-3 {
+    /* grid-template-columns: 1fr; */
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+  .wrapper {
+    max-width: 69.4375rem;
+    border: solid black;
+  }
+  .grid-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* DeskTop */
+@media (min-width: 1440px) {
+  /* .wrapper {
+    max-width: 69.4375rem;
+    border: solid black;
+  } */
+  header {
+    max-width: 100%;
+  }
+  header h1 {
+    /* color: var(--Black, #030303); */
+    /* text-align: center; */
+    font-feature-settings: "clig" off, "liga" off;
+    /* width: 100%; */
+    /* Heading (L) */
+    /* font-family: Plus Jakarta Sans; */
+    font-size: 3.5rem;
+    /* font-style: normal; */
+    /* font-weight: 700; */
+    /* line-height: normal; */
+  }
+  header p {
+    width: 45.625rem;
+    margin-inline: auto;
+    color: var(--Medium-Brown, #7a746e);
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+
+    /* Body (M) */
+    /* font-family: Plus Jakarta Sans; */
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem; /* 155.556% */
+  }
+}
+
+@media (min-width: 1536px) {
+}
